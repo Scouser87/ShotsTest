@@ -92,10 +92,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6iZ-FO-OAN" firstAttribute="top" secondItem="9HM-eM-ibu" secondAttribute="bottom" constant="6" id="8AD-bx-9YY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9HM-eM-ibu" secondAttribute="trailing" constant="6" id="By5-0b-CBY"/>
-                            <constraint firstItem="9HM-eM-ibu" firstAttribute="top" secondItem="g9M-iO-RSC" secondAttribute="bottom" constant="6" id="jV9-HS-smh"/>
-                            <constraint firstItem="9HM-eM-ibu" firstAttribute="leading" secondItem="72T-Fi-HXq" secondAttribute="leadingMargin" constant="6" id="wzf-Lc-JhA"/>
+                            <constraint firstItem="6iZ-FO-OAN" firstAttribute="top" secondItem="9HM-eM-ibu" secondAttribute="bottom" id="8AD-bx-9YY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9HM-eM-ibu" secondAttribute="trailing" id="By5-0b-CBY"/>
+                            <constraint firstItem="9HM-eM-ibu" firstAttribute="top" secondItem="g9M-iO-RSC" secondAttribute="bottom" id="jV9-HS-smh"/>
+                            <constraint firstItem="9HM-eM-ibu" firstAttribute="leading" secondItem="72T-Fi-HXq" secondAttribute="leadingMargin" id="wzf-Lc-JhA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WRh-2E-uaQ"/>

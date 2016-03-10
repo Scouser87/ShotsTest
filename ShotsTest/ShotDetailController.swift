@@ -94,6 +94,14 @@ class ShotDetailController: UIViewController, UIScrollViewDelegate {
         scrollView.zoomToRect(rectToZoomTo, animated: true)
     }
     
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
+    
+    func scrollViewDidZoom(scrollView: UIScrollView) {
+        centerScrollViewContents()
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
