@@ -31,7 +31,7 @@ class Utils {
         }
     }
     
-    class func asyncLoadShotHdImage(shot: Shot, imageView : UIImageView){
+    class func asyncLoadShotHdImage(shot: Shot, completion: ((UIImage) -> Void)!){
         
         let downloadQueue = dispatch_queue_create("Utils.processsdownload", nil)
         
@@ -46,9 +46,7 @@ class Utils {
             }
             
             dispatch_async(dispatch_get_main_queue()) {
-                let size : CGSize = (image?.size)!
-                imageView.image = image                
-                imageView.frame = CGRectMake(0,0, size.width, size.height)
+                completion(image!)
             }
         }
     }
