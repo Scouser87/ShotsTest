@@ -76,7 +76,12 @@ class ShotsViewController: UITableViewController {
         //cell.ratingImageView.image = imageForRating(player.rating)
         
         //cell.previewImageView.image = UIImage(named: "whitebox.jpg")
-        Utils.asyncLoadShotImage(shot, imageView: cell.previewImageView)
+        if shot.imageData != nil {
+            cell.previewImageView.image = UIImage(data: shot.imageData!)!
+        }
+        else {
+            Utils.asyncLoadShotImage(shot, imageView: cell.previewImageView)
+        }
         
         return cell
     }
