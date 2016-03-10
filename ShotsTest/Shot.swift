@@ -17,6 +17,7 @@ class Shot {
     var imageHdpiUrl : String!
     
     var imageData : NSData?
+    var bigImageData : NSData?
     
     init(){
         self.id = 1

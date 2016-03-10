@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		85CF93211C9203CB00A63789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CF93201C9203CB00A63789 /* AppDelegate.swift */; };
-		85CF93231C9203CB00A63789 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CF93221C9203CB00A63789 /* ViewController.swift */; };
 		85CF93261C9203CB00A63789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CF93241C9203CB00A63789 /* Main.storyboard */; };
 		85CF93281C9203CB00A63789 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CF93271C9203CB00A63789 /* Assets.xcassets */; };
 		85CF932B1C9203CB00A63789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CF93291C9203CB00A63789 /* LaunchScreen.storyboard */; };
@@ -18,12 +17,12 @@
 		85CF933B1C92088800A63789 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CF933A1C92088800A63789 /* Utils.swift */; };
 		85CF933D1C920BA500A63789 /* DribbbleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CF933C1C920BA500A63789 /* DribbbleAPI.swift */; };
 		85CF93401C92104800A63789 /* whitebox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85CF933F1C92104800A63789 /* whitebox.jpg */; };
+		85CF93421C921A4900A63789 /* ShotDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CF93411C921A4900A63789 /* ShotDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		85CF931D1C9203CB00A63789 /* ShotsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShotsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CF93201C9203CB00A63789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85CF93221C9203CB00A63789 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		85CF93251C9203CB00A63789 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85CF93271C9203CB00A63789 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85CF932A1C9203CB00A63789 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +33,7 @@
 		85CF933A1C92088800A63789 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		85CF933C1C920BA500A63789 /* DribbbleAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DribbbleAPI.swift; sourceTree = "<group>"; };
 		85CF933F1C92104800A63789 /* whitebox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = whitebox.jpg; sourceTree = "<group>"; };
+		85CF93411C921A4900A63789 /* ShotDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,6 @@
 				85CF93371C92082400A63789 /* Dribbble */,
 				85CF93321C9206EF00A63789 /* UI */,
 				85CF93201C9203CB00A63789 /* AppDelegate.swift */,
-				85CF93221C9203CB00A63789 /* ViewController.swift */,
 				85CF93241C9203CB00A63789 /* Main.storyboard */,
 				85CF93271C9203CB00A63789 /* Assets.xcassets */,
 				85CF93291C9203CB00A63789 /* LaunchScreen.storyboard */,
@@ -84,6 +83,7 @@
 			children = (
 				85CF93331C9206FF00A63789 /* ShotCell.swift */,
 				85CF93351C9207AB00A63789 /* ShotsViewController.swift */,
+				85CF93411C921A4900A63789 /* ShotDetailController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -179,7 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85CF93361C9207AB00A63789 /* ShotsViewController.swift in Sources */,
-				85CF93231C9203CB00A63789 /* ViewController.swift in Sources */,
+				85CF93421C921A4900A63789 /* ShotDetailController.swift in Sources */,
 				85CF93341C9206FF00A63789 /* ShotCell.swift in Sources */,
 				85CF93391C92083300A63789 /* Shot.swift in Sources */,
 				85CF93211C9203CB00A63789 /* AppDelegate.swift in Sources */,

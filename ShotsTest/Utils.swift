@@ -31,6 +31,28 @@ class Utils {
         }
     }
     
+    class func asyncLoadShotHdImage(shot: Shot, imageView : UIImageView){
+        
+        let downloadQueue = dispatch_queue_create("Utils.processsdownload", nil)
+        
+        dispatch_async(downloadQueue) {
+            
+            let data = NSData(contentsOfURL: NSURL(string: shot.imageHdpiUrl)!)
+            
+            var image : UIImage?
+            if data != nil {
+                shot.bigImageData = data
+                image = UIImage(data: data!)!
+            }
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                let size : CGSize = (image?.size)!
+                imageView.image = image                
+                imageView.frame = CGRectMake(0,0, size.width, size.height)
+            }
+        }
+    }
+    
     class func getStringFromJSON(data: NSDictionary, key: String) -> String{
         
         //let info : AnyObject? = data[key]

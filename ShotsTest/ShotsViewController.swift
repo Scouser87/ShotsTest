@@ -121,14 +121,22 @@ class ShotsViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if(segue.identifier == "show_hd"){
+            
+            var indexPath = tableView.indexPathForSelectedRow!
+            
+            let controller = segue.destinationViewController as! ShotDetailController
+            controller.shot = shots[indexPath.row]
+        }        
     }
-    */
+    
 
 }
