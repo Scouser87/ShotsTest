@@ -29,6 +29,7 @@ class ShotsViewController: UITableViewController {
         
         self.api = DribbbleAPI()
         
+        api.loadLocalShots(didLoadShots)
         updateShots()
     }
     
@@ -73,9 +74,7 @@ class ShotsViewController: UITableViewController {
         let shot = shots[indexPath.row] as Shot
         cell.titleLabel.text = shot.title
         cell.descriptionLabel.text = shot.description
-        //cell.ratingImageView.image = imageForRating(player.rating)
         
-        //cell.previewImageView.image = UIImage(named: "whitebox.jpg")
         if shot.imageData != nil {
             cell.previewImageView.image = UIImage(data: shot.imageData!)!
         }
