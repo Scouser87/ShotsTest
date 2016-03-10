@@ -20,7 +20,12 @@ class ShotDetailController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Utils.asyncLoadShotHdImage(shot, completion: didLoadImage)
+        if shot.bigImageData != nil {
+            didLoadImage(UIImage(data: shot.bigImageData!)!)
+        }
+        else {
+            Utils.asyncLoadShotHdImage(shot, completion: didLoadImage)
+        }
     }
     
     func didLoadImage(loadedImage: UIImage){
