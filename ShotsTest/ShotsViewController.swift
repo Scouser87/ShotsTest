@@ -20,10 +20,6 @@ class ShotsViewController: UITableViewController {
     
     var shotsIsUpdating : Bool?
     
-    var container: UIView = UIView()
-    var loadingView: UIView = UIView()
-    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,13 +45,11 @@ class ShotsViewController: UITableViewController {
         }
         self.tableView.reloadData()
         self.shotsIsUpdating = false
-        hideActivityIndicator(self.view)
     }
     
     func updateShots(){
         
         self.shotsIsUpdating = true
-        showActivityIndicator(self.view)
         let url = "https://api.dribbble.com/v1/shots"
         api.loadShots(url, completion: didLoadShots)
     }
@@ -159,38 +153,5 @@ class ShotsViewController: UITableViewController {
                 updateShots()
             }
         }
-    }
-    
-    func showActivityIndicator(uiView: UIView) {
-        container.frame = uiView.frame
-        container.center = uiView.center
-        container.backgroundColor = UIColorFromHex(0xffffff, alpha: 0.3)
-        
-        loadingView.frame = CGRectMake(0, 0, 80, 80)
-        loadingView.center = uiView.center
-        loadingView.backgroundColor = UIColorFromHex(0x444444, alpha: 0.7)
-        loadingView.clipsToBounds = true
-        loadingView.layer.cornerRadius = 10
-        
-        activityIndicator.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
-        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
-        activityIndicator.center = CGPointMake(loadingView.frame.size.width / 2, loadingView.frame.size.height / 2);
-        
-        loadingView.addSubview(activityIndicator)
-        container.addSubview(loadingView)
-        uiView.addSubview(container)
-        activityIndicator.startAnimating()
-    }
-
-    func hideActivityIndicator(uiView: UIView) {
-        activityIndicator.stopAnimating()
-        container.removeFromSuperview()
-    }
-    
-    func UIColorFromHex(rgbValue:UInt32, alpha:Double=1.0)->UIColor {
-        let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
-        let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
-        let blue = CGFloat(rgbValue & 0xFF)/256.0
-        return UIColor(red:red, green:green, blue:blue, alpha:CGFloat(alpha))
     }
 }
